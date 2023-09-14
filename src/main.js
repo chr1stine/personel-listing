@@ -6,11 +6,11 @@ import Search from './components/Search.vue';
 import Results from './components/Results.vue';
 import User from './components/User.vue';
 
-import mainStore from './stores/main'
+import store from './stores/main'
 
 const app = createApp(App);
 
-app.use(mainStore);
+app.use(store);
 
 app.component('Search', Search);
 app.component('Results', Results);
