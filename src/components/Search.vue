@@ -15,7 +15,7 @@ export default {
       this.throttling = true
       setTimeout(() => {
         this.throttling = false
-        this.$store.dispatch('updateSearchString', newValue)
+        this.$store.dispatch('updateSearchString', this.$refs.input.value)
       }, 1000)
     }
   }
@@ -27,6 +27,7 @@ export default {
     <p class="bold-text">Поиск сотрудников</p>
     <input
       v-model="tempName"
+      ref="input"
       class="rounded--small border-1 secondary-text"
       type="text"
       placeholder="Введите id или имя"
