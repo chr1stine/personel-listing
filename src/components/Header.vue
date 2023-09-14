@@ -1,6 +1,6 @@
 <template>
     <header>
-        <img src="src/assets/logo.svg" alt="logo">
+        <img src="../assets/logo.svg" alt="logo">
         <span class="user">Пользователь</span>
     </header>
 </template>

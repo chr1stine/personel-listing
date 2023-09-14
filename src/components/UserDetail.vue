@@ -42,7 +42,7 @@ export default {
       Выберите сотрудника, чтобы посмотреть его профиль
     </p>
     <div v-else class="container">
-      <img class="profile-pic border-3 rounded" src="src/assets/profile.png" />
+      <img class="profile-pic border-3 rounded" src="../assets/profile.png" />
       <div class="info">
         <p class="bold-text">{{ user.name }}</p>
         <p>

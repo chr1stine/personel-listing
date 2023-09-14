@@ -16,7 +16,7 @@ export default {
 
 <template>
   <div @click="select" class="container shadowed border-1 rounded">
-    <img src="src/assets/profile.png" class="profile-pic" />
+    <img src="../assets/profile.png" class="profile-pic" />
     <div class="captions-container" :class="{ selected }">
       <span class="bold-text">{{ user.username }}</span>
       <span class="secondary-text">{{ user.email }}</span>
