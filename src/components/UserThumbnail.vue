@@ -11,9 +11,6 @@ export default {
       return this.$store.state.selectedId === this.user.id
     }
   },
-  mounted() {
-    console.log('now id is', this.selected)
-  },
 }
 </script>
 
