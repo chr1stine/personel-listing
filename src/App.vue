@@ -25,11 +25,10 @@ import UserDetail from './components/UserDetail.vue'
 <style lang="scss" scoped>
 .container {
   margin: 3em;
-  height: 100vh;
 }
 .box {
   background-color: #fdfdfd;
-  min-height: 70%;
+  height: 70vh;
 
   display: flex;
 
@@ -39,6 +38,9 @@ import UserDetail from './components/UserDetail.vue'
 
   &__sidebar {
     width: 30%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
   &__user {
     width: 70%;

@@ -33,16 +33,16 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="scroll-wrapper">
     <p class="bold-text">Результаты</p>
-    <div>
+    <div class="scroll-wrapper">
       <p v-if="loading" class="above-all">зарузка</p>
       <p v-else-if="error" class="above-all">ошибка: {{ this.error }}</p>
       <p v-else-if="!searching" class="secondary-text">Начните поиск</p>
-      <div v-else>
+      <div class="scroll-wrapper" v-else>
         <p v-if="this.users.length === 0" class="secondary-text">Ничего не найдено</p>
-        <ul v-else class="list" v-for="user in users" :key="user.id">
-          <li>
+        <ul v-else class="list">
+          <li v-for="user in users" :key="user.id">
             <UserThumbnail :user="user" />
           </li>
         </ul>
@@ -52,9 +52,19 @@ export default {
 </template>
 
 <style scoped>
+.scroll-wrapper {
+  height: 100%;
+  overflow-y: hidden;
+  padding-bottom: 2em;
+}
 .list {
   display: flex;
+  height: 100%;
   flex-direction: column;
   gap: 1em;
+  overflow-y: scroll;
+}
+li:last-child {
+  margin-bottom: 2em;
 }
 </style>

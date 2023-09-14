@@ -23,7 +23,7 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="search-wrapper">
     <p class="bold-text">Поиск сотрудников</p>
     <input
       v-model="tempName"
@@ -36,6 +36,10 @@ export default {
 </template>
 
 <style scoped>
+.search-wrapper {
+  height: fit-content;
+}
+
 input {
   background-color: #ffffff;
   padding: 1em;

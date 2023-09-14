@@ -10,7 +10,7 @@ export default {
     selected() {
       return this.$store.state.selectedId === this.user.id
     }
-  },
+  }
 }
 </script>
 
@@ -45,7 +45,13 @@ export default {
   flex: 1;
   border-top-right-radius: inherit;
   border-bottom-right-radius: inherit;
-  overflow: hidden;
+
+  * {
+    max-width: 70%;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 }
 .selected {
   background-color: #e9ecef;
