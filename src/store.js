@@ -17,6 +17,10 @@ const store = createStore({
     },
     newSearchString(state, payload) {
       state.searchString = payload
+      if (!payload.length) {
+        state.user = null
+        state.selectedId = null
+      }
     },
     updateSelectedId(state, payload) {
       state.selectedId = payload
@@ -32,8 +36,12 @@ const store = createStore({
     selectNewId({ commit }, { id }) {
       commit('newId', id)
     },
-    updateSearchString({ commit }, searchString) {
+    updateSearchString({ commit, state, getters }, searchString) {
       commit('newSearchString', searchString)
+      if (!getters.getRelevantUsers.map((u) => u.id).includes(state.selectedId)) {
+        commit('updateUser', null)
+        commit('newId', null)
+      }
     },
     async loadUsers({ commit }) {
       return new Promise((resolve, reject) => {
