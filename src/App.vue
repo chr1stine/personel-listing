@@ -23,6 +23,11 @@ import UserDetail from './components/UserDetail.vue'
 </template>
 
 <style lang="scss" scoped>
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
+  src: url('./assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
 .container {
   margin: 3em;
 }
