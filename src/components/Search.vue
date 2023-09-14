@@ -39,6 +39,7 @@ export default {
 input {
   background-color: #ffffff;
   padding: 1em;
+  width: 100%;
 }
 
 input:focus {

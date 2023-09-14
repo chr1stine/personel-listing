@@ -73,7 +73,9 @@ export default {
 }
 .placeholder {
   background-color: white;
+  border-left: #E0E0E0 solid 1px;
   width: 100%;
+  height: 100%;
   border-top-right-radius: inherit;
   border-bottom-right-radius: inherit;
 

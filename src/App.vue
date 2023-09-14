@@ -10,23 +10,24 @@ import UserDetail from './components/UserDetail.vue'
     <Header />
 
     <main class="box rounded border-2 shadowed">
-      <div>
+      <div class="box__sidebar">
         <Search />
         <Results />
       </div>
 
-      <UserDetail />
+      <div class="box__user">
+        <UserDetail />
+      </div>
     </main>
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .container {
   margin: 3em;
   height: 100vh;
 }
 .box {
-  background-color: #ffffff;
   background-color: #fdfdfd;
   min-height: 70%;
 
@@ -34,6 +35,13 @@ import UserDetail from './components/UserDetail.vue'
 
   * {
     padding: 1.5em;
+  }
+
+  &__sidebar {
+    width: 30%;
+  }
+  &__user {
+    width: 70%;
   }
 }
 </style>

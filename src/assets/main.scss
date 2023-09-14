@@ -5,6 +5,9 @@ ul {
 li {
     list-style: none;
 }
+* {
+    box-sizing: border-box;
+}
 
 // font
 @font-face {
