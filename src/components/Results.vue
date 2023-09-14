@@ -36,7 +36,7 @@ export default {
   <div class="scroll-wrapper">
     <p class="bold-text">Результаты</p>
     <div class="scroll-wrapper">
-      <p v-if="loading" class="above-all">зарузка</p>
+      <p v-if="loading" class="above-all"><span class="loader"></span></p>
       <p v-else-if="error" class="above-all">ошибка: {{ this.error }}</p>
       <p v-else-if="!searching" class="secondary-text">Начните поиск</p>
       <div class="scroll-wrapper" v-else>

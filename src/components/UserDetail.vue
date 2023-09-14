@@ -36,7 +36,7 @@ export default {
 
 <template>
   <div class="user" :class="{ placeholder: !user }">
-    <p v-if="loading" class="above-all">зарузка</p>
+    <p v-if="loading" class="above-all"><span class="loader"></span></p>
     <p v-else-if="error" class="above-all">ошибка: {{ error }}</p>
     <p v-else-if="!user" class="placeholder-text">
       Выберите сотрудника, чтобы посмотреть его профиль
@@ -70,6 +70,7 @@ export default {
 <style scoped>
 .user {
   background-color: transparent;
+  height: 100%;
 }
 .placeholder {
   background-color: white;
