@@ -2,12 +2,21 @@
 export default {
   data() {
     return {
-      tempName: ''
+      tempName: '',
+      thottling: null
     }
   },
   watch: {
     tempName(newValue) {
+      if (this.throttling) {
+        return
+      }
       this.$store.dispatch('updateSearchString', newValue)
+      this.throttling = true
+      setTimeout(() => {
+        this.throttling = false
+        this.$store.dispatch('updateSearchString', newValue)
+      }, 1000)
     }
   }
 }
